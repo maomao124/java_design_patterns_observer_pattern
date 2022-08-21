@@ -18,7 +18,8 @@ public interface Observer
     /**
      * 更新方法
      *
-     * @param message 消息
+     * @param message     消息
+     * @param subjectName 主题名称，这里主要指公众号的名称
      */
-    void update(String message);
+    void update(String message, String subjectName);
 }

@@ -16,7 +16,7 @@ package mao.t1;
 public class WechatUser implements Observer
 {
     //微信用户名
-    private String name;
+    private final String name;
 
     public WechatUser(String name)
     {
@@ -29,9 +29,9 @@ public class WechatUser implements Observer
     }
 
     @Override
-    public void update(String message)
+    public void update(String message, String subjectName)
     {
-        System.out.println("微信用户" + name + "接收到公众号消息：" + message);
+        System.out.println("微信用户" + name + "接收到" + subjectName + "公众号的消息：" + message);
     }
 
 }

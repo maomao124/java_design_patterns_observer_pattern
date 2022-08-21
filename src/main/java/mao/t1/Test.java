@@ -15,5 +15,21 @@ package mao.t1;
 
 public class Test
 {
+    public static void main(String[] args)
+    {
+        Observer observer1 = new WechatUser("张三");
+        Observer observer2 = new WechatUser("李四");
+        Observer observer3 = new WechatUser("王五");
+        Observer observer4 = new WechatUser("赵六");
+        Observer observer5 = new WechatUser("王八");
 
+        Subject subject1 = new SubscriptionSubject("腾讯新闻官方公众号");
+
+        subject1.attach(observer1);
+        subject1.attach(observer2);
+        subject1.attach(observer3);
+        subject1.attach(observer4);
+        subject1.attach(observer5);
+
+    }
 }

@@ -13,12 +13,21 @@ import java.util.List;
  * Date(创建日期)： 2022/8/21
  * Time(创建时间)： 13:17
  * Version(版本): 1.0
- * Description(描述)： 无
+ * Description(描述)： 具体主题（具体被观察者）
  */
 
 public class SubscriptionSubject implements Subject
 {
-    private final List<Observer> userList = new ArrayList<>();
+    //公众号的名称
+    private final String name;
+
+    private final List<Observer> userList;
+
+    public SubscriptionSubject(String name)
+    {
+        this.name = name;
+        userList = new ArrayList<>();
+    }
 
     @Override
     public void attach(Observer observer)
@@ -37,7 +46,7 @@ public class SubscriptionSubject implements Subject
     {
         for (Observer observer : userList)
         {
-            observer.update(message);
+            observer.update(message, name);
         }
     }
 }
