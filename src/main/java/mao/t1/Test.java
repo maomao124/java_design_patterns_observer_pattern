@@ -31,5 +31,21 @@ public class Test
         subject1.attach(observer4);
         subject1.attach(observer5);
 
+        Observer observer6 = new WechatUser("张里");
+        Observer observer7 = new WechatUser("李五");
+        Observer observer8 = new WechatUser("王久");
+
+        Subject subject2 = new SubscriptionSubject("百度地图");
+        subject2.attach(observer6);
+        subject2.attach(observer7);
+        subject2.attach(observer8);
+        subject2.attach(observer3);
+
+        //通知
+        subject1.notify("你好，欢迎关注");
+
+        System.out.println("-------");
+
+        subject2.notify("欢迎关注━(*｀∀´*)ノ亻!");
     }
 }
