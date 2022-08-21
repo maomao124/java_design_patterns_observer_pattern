@@ -47,5 +47,9 @@ public class Test
         System.out.println("-------");
 
         subject2.notify("欢迎关注━(*｀∀´*)ノ亻!");
+
+        System.out.println("-------");
+
+        subject1.notify("震惊！鸡蛋和石头竟然不能一起吃！原因竟然是......");
     }
 }
