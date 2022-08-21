@@ -15,5 +15,12 @@ package mao.t2;
 
 public class Test
 {
-
+    public static void main(String[] args)
+    {
+        Observable observable = new OilFutures(29);
+        observable.setPrice(28);
+        observable.setPrice(25);
+        observable.setPrice(26);
+        observable.setPrice(30);
+    }
 }
